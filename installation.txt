@@ -1,0 +1,13 @@
+Installation:
+
+1) Copy files to any preferred  directory
+2) Type make
+
+If make raises an error please make sure the compiler is recent. If an error still occurs this may be because the compiler does not support threading. In this case, a non-threaded version of VarHMM can be made by renaming varhmm_nothread.cpp to varhmm.cpp and typing make. 
+
+Run:
+
+Type varhmm to get help menu for alignment
+Type varhmmtain to get help menu for training
+
+
