@@ -12,7 +12,6 @@
 #include <limits>
 #include <fstream>
 #include <iostream>
-
 #include <sstream>
 
 using namespace std;
@@ -32,7 +31,6 @@ struct vfwdbackpair
 	int ninsert;
 };
 
-
 struct vfwdback
 {
 	double ptotalfwd;
@@ -45,7 +43,6 @@ struct vfwdback
 const int AMIN = -(int)(numeric_limits<double>::infinity()); //-100000;
 
 const int NOSTATETYPES = 6;
-
 const int BEGINSTATE = 10;
 const int ENDSTATE = 11;
 

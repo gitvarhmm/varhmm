@@ -13,8 +13,8 @@
 
 #include <math.h> 
 #include <string.h> 
-
 #include <thread>
+
 using namespace std;
 
 
@@ -26,7 +26,6 @@ struct charcountstruct
 	int nT;
 };
 
-			
 struct vitstruct
 {
 	double ptotalfwd;
@@ -64,7 +63,6 @@ const int AMIN = -(int)(numeric_limits<double>::infinity());
 const double VERSION = 1.01;
 
 const int NOSTATETYPES = 6;
-
 const int BEGINSTATE = 10;
 const int ENDSTATE = 11;
 
@@ -119,8 +117,6 @@ const string sPRECALCMATRIXFILEDESC = "   Filename: 8-length score matrix file (
 const string sOUTPUTFILEDESC        = "   Filename: Output file (if not given, then generated\n     based on reference,reads,and training file names)"; 
 
 								   
-
-
 #define hmmx(i,j,k) hmmx[(k+j*nstates+i*nindexfactor)]
 #define hmmy(i,j,k) hmmy[(k+j*nstates+i*nindexfactor)]
 
@@ -1242,7 +1238,7 @@ vitstruct ViterbiVariedOrderHMM(int* data1, int* data2, string sdata1, string sd
 					} //a > AMIN
 					
 					
-					if(vsum > dmax)// || (vsum == dmax && k == 2))
+					if(vsum > dmax)
 					{
 						dmax = vsum;
 						imax = k;
@@ -2247,8 +2243,7 @@ void quickSortStrings(string* items, unsigned short int arr[], unsigned int arr2
 {
   int i, j;
   int tmp;
-  //char *x;
-  //char temp[24];
+
   string x;
   string temp;
 
@@ -2267,10 +2262,6 @@ void quickSortStrings(string* items, unsigned short int arr[], unsigned int arr2
 	  temp = items[i];
 	  items[i] = items[j];
 	  items[j] = temp;
-	  /*
-      strcpy(temp, items[i]);
-      strcpy(items[i], items[j]);
-      strcpy(items[j], temp);*/
       
       tmp = arr[i];
       arr[i] = arr[j];
@@ -2336,9 +2327,6 @@ unsigned int ConvertIntsToID(unsigned short int* nvals, int nindex, int nidlengt
 int ConvertDoubleScoreCharScore(double d)
 {
 	int i;
-	
-	//i = (int)(((d+1)/5.0)*256);
-	//if(i > 256) i = 256;
 	
 	i = (int)(((d+1)/5.0)*126);
 	if(i > 126) i = 126;

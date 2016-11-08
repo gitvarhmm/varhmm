@@ -13,8 +13,8 @@
 
 #include <math.h> 
 #include <string.h> 
-
 #include <thread>
+
 using namespace std;
 
 
@@ -26,7 +26,7 @@ struct charcountstruct
 	int nT;
 };
 
-			
+		
 struct vitstruct
 {
 	double ptotalfwd;
@@ -64,7 +64,6 @@ const int AMIN = -(int)(numeric_limits<double>::infinity());
 const double VERSION = 1.01;
 
 const int NOSTATETYPES = 6;
-
 const int BEGINSTATE = 10;
 const int ENDSTATE = 11;
 
